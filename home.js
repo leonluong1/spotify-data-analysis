@@ -1,9 +1,11 @@
 const express = require('express');
 const router = express.Router();
+const path = require('path');
+
 
 // Home page route
 router.get('/', (req, res) => {
-  res.send('This is the home page');
+  res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
 module.exports = router;
