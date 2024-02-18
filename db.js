@@ -22,13 +22,21 @@ const pool = new Pool({
 //         console.log(err);
 //     }
 // })();
+song_query = 'SELECT * FROM song';
 
-(async () => {
-    try{
-        const {rows} = await pool.query('SELECT * FROM song');
-        //const currentUser = rows[0]['current_user'];
-        console.log(rows);
-    }catch (err){
-        console.log(err);
-    }
-})();
+// (async () => {
+//     try{
+//         const {rows} = await pool.query('SELECT * FROM song');
+//         //const currentUser = rows[0]['current_user'];
+//         console.log(rows);
+//     }catch (err){
+//         console.log(err);
+//     }
+// })();
+
+async function querySongs(query=song_query) {
+    let response = await pool.query(query);
+    return response.rows;
+}
+
+module.exports = {querySongs};
