@@ -14,6 +14,11 @@ app.use('/', homeRouter);
 app.use('/model', modelRouter);
 app.use('/dashboard', tableauRouter);
 app.use('/exploration', explorationRouter);
+app.use('/static/css', express.static('static/css', {
+    setHeaders: (res) => {
+        res.setHeader('Content-Type', 'text/css');
+    },
+}));
 
 app.get('/api/songs', async (req, res) => {
     let query = await querySongs()
