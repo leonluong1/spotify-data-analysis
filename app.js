@@ -1,20 +1,20 @@
 const express = require('express');
-const homeRouter = require('./home.js');
-const modelRouter = require('./model.js');
-const tableauRouter = require('./dashboard.js');
-const explorationRouter = require('./exploration.js');
+const homeRouter = require('./routes/home.js');
+const modelRouter = require('./routes/model.js');
+const tableauRouter = require('./routes/dashboard.js');
+const explorationRouter = require('./routes/exploration.js');
 const app = express();
 const PORT = process.env.PORT || 3000;
 const {
     querySongs
- } = require('./db.js');
+ } = require('./models/db.js');
 
 
 app.use('/', homeRouter);
 app.use('/model', modelRouter);
 app.use('/dashboard', tableauRouter);
 app.use('/exploration', explorationRouter);
-app.use('/static/css', express.static('static/css', {
+app.use('/css', express.static('css', {
     setHeaders: (res) => {
         res.setHeader('Content-Type', 'text/css');
     },
