@@ -5,6 +5,18 @@ body {
     font-family: Gotham, Arial, sans-serif;
     font-weight: 600;
   }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 33vh; /* Cover only the top quarter of the screen */
+    background-image: linear-gradient(to bottom, #4527A0, rgba(103, 58, 183, 0)); /* Purple to transparent */
+    z-index: -1; /* Move the pseudo-element behind the content */
+  }
+  
   
   .app-container {
     display: flex;
