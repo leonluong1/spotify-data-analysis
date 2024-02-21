@@ -5,14 +5,14 @@ require('dotenv').config({
 });
 const {Pool, Client} = require('pg');
 
-const pool = new Pool({
-    user: process.env.USER,
-    host: process.env.HOST,
-    database: 'spotify_db',
-    password: process.env.PASSWORD,
-    port: process.env.PORT,
-});
-/*
+// const pool = new Pool({
+//     user: process.env.USER,
+//     host: process.env.HOST,
+//     database: 'spotify_db',
+//     password: process.env.PASSWORD,
+//     port: process.env.PORT,
+// });
+
 const pool = new Pool({
     user: 'postgres',
     host: 'localhost',
@@ -20,7 +20,7 @@ const pool = new Pool({
     password: 'postgres',
     port: 5432,
 });
-*/
+
 
 // (async () => {
 //     try{
