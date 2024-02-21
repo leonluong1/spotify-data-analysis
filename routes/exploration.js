@@ -1,9 +1,10 @@
 const express = require('express');
 const router = express.Router();
+const path = require('path');
 
 // Tableau page route
 router.get('/', (req, res) => {
-  res.send('This is the data exploration page');
+  res.sendFile(path.join(__dirname, '../views', 'exploration.html'));
 });
 
 module.exports = router;

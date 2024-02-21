@@ -4,6 +4,7 @@ const modelRouter = require('./routes/model.js');
 const tableauRouter = require('./routes/dashboard.js');
 const explorationRouter = require('./routes/exploration.js');
 const app = express();
+const path = require('path');
 const PORT = process.env.PORT || 3000;
 const {
     querySongs
@@ -19,6 +20,9 @@ app.use('/css', express.static('css', {
         res.setHeader('Content-Type', 'text/css');
     },
 }));
+app.use('/images', express.static('images'));
+//app.use(express.static('/images'));
+
 
 app.get('/api/songs', async (req, res) => {
     let query = await querySongs()

@@ -32,6 +32,7 @@ body {
     grid-auto-rows: 40%; /* Each row is 25% of the .app-container's height */
     gap: 10px;
     width: 96%; /* Full width */
+    height: 140px;
     margin-top: 20px;
   }
   
@@ -56,5 +57,11 @@ body {
     top: 10px;
     right: 10px;
     color: #1db954; /* Spotify green color */
+  }
+  
+  .icon {
+    width: 10%;
+    height: 100%;
+    margin-right: 10px;
   }
   
