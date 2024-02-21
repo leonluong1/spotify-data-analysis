@@ -12,6 +12,15 @@ const pool = new Pool({
     password: process.env.PASSWORD,
     port: process.env.PORT,
 });
+/*
+const pool = new Pool({
+    user: 'postgres',
+    host: 'localhost',
+    database: 'spotify_db',
+    password: 'postgres',
+    port: 5432,
+});
+*/
 
 // (async () => {
 //     try{
