@@ -6,23 +6,55 @@
   <title>Spotify App</title>
   <link rel="stylesheet" href="../css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Gotham:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="../static/js/index.js"></script>
 </head>
 
 <body>
     <div class="app-container">
       <h1 class="title">Spotify App</h1>
       <div class="inner-container">
-        <a href="/dashboard">
-          Go to the dashboard
-        </a>
-        <a href="/model">
+        <div class="playlist-button" onclick="goto('/dashboard')" onmouseenter="">
           <img src="../images/tableau.png" alt="description" class="icon">
-          Go to the model
-        </a>
-        <a href="/exploration">Go to the data exploration page</a>
-        <a href="/dashboard">Go to the dashboard</a>
-        <a href="/model">Go to the model</a>
-        <a href="/exploration">Go to the data exploration page</a>
+          <p>
+            Go to the dashboard
+          </p>
+          <img src="../images/Spotify-Play-Button.png" alt="play-button" class="play-button">
+        </div>
+        <div class="playlist-button" onclick="goto('/model')" onmouseenter="">
+          <img src="../images/tableau.png" alt="description" class="icon">
+          <p>
+            Go to the model
+          </p>
+          <img src="../images/Spotify-Play-Button.png" alt="play-button" class="play-button">
+        </div>
+        <div class="playlist-button" onclick="goto('/exploration')" onmouseenter="">
+          <img src="../images/tableau.png" alt="description" class="icon">
+          <p>
+            Go to the exploration
+          </p>
+          <img src="../images/Spotify-Play-Button.png" alt="play-button" class="play-button">
+        </div>
+        <div class="playlist-button" onclick="goto('/dashboard')" onmouseenter="">
+          <img src="../images/tableau.png" alt="description" class="icon">
+          <p>
+            Go to the dashboard
+          </p>
+          <img src="../images/Spotify-Play-Button.png" alt="play-button" class="play-button">
+        </div>
+        <div class="playlist-button" onclick="goto('/model')" onmouseenter="">
+          <img src="../images/tableau.png" alt="description" class="icon">
+          <p>
+            Go to the model
+          </p>
+          <img src="../images/Spotify-Play-Button.png" alt="play-button" class="play-button">
+        </div>
+        <div class="playlist-button" onclick="goto('/exploration')" onmouseenter="">
+          <img src="../images/tableau.png" alt="description" class="icon">
+          <p>
+            Go to the exploration
+          </p>
+          <img src="../images/Spotify-Play-Button.png" alt="play-button" class="play-button">
+        </div>
         <!-- <a href="/dashboard">Go to the dashboard</a>
         <a href="/model">Go to the model</a>
         <a href="/exploration">Go to the data exploration page</a> -->
