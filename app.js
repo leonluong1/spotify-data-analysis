@@ -10,19 +10,20 @@ const {
     querySongs
  } = require('./models/db.js');
 
-
+ 
+app.use(express.static(path.join(__dirname)));
 app.use('/', homeRouter);
 app.use('/model', modelRouter);
 app.use('/dashboard', tableauRouter);
 app.use('/exploration', explorationRouter);
-app.use('/css', express.static('css', {
+
+/*app.use('/images', express.static('images'));
+app.use('/static', express.static('static'));
+app.use('/', express.static('css', {
     setHeaders: (res) => {
         res.setHeader('Content-Type', 'text/css');
     },
-}));
-app.use('/images', express.static('images'));
-app.use('/static', express.static('static'));
-//app.use(express.static('/images'));
+}));*/
 
 
 app.get('/api/songs', async (req, res) => {

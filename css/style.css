@@ -50,6 +50,25 @@ body {
     right: 10px;
     color: #1db954; /* Spotify green color */
   }
+
+  .title2 {
+
+    top: 10px;
+    float: right;
+    padding-left: 20px;
+    color: #1db954; /* Spotify green color */
+  }
+
+  .title-container {
+    width: 50%;
+  }
+
+  .logo {
+    width: 100px;
+    height: 100px;
+    float: left;
+  }
+  
   
   .icon {
     width: 12%;
