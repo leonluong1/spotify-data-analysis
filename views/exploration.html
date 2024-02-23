@@ -6,9 +6,69 @@
   <title>Spotify App</title>
   <link rel="stylesheet" href="../css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Gotham:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="../static/js/logic.js" defer></script>
 </head>
 
-<body>
-    <div class="app-container">
-    </div>
-  </body>
+<body class="slider-body">
+  <div class="slider-container">
+    <input type="range" min="1" max="100" value="50" class="slider" id="acousticness">
+  </div>
+
+  <div class="slider-container">
+    <input type="range" min="1" max="100" value="50" class="slider" id="danceability">
+  </div>
+
+  <div class="slider-container">
+    <input type="range" min="1" max="100" value="50" class="slider" id="energy">
+  </div>
+
+  <div class="slider-container">
+    <input type="range" min="1" max="100" value="50" class="slider" id="instrumentalness">
+  </div>
+
+  <div class="slider-container">
+    <input type="range" min="1" max="100" value="50" class="slider" id="liveness">
+  </div>
+
+  <div class="slider-container">
+    <input type="range" min="1" max="100" value="50" class="slider" id="loudness">
+  </div>
+
+  <div class="slider-container">
+    <input type="range" min="1" max="100" value="50" class="slider" id="speechiness">
+  </div>
+
+  <div class="slider-container">
+    <input type="range" min="1" max="100" value="50" class="slider" id="tempo">
+  </div>
+
+  <div class="slider-container">
+    <input type="range" min="1" max="100" value="50" class="slider" id="valence">
+  </div>
+
+  <label for="years">Select a start year:</label>
+  <select id="years1"></select>
+
+  <label for="years">Select an end year:</label>
+  <select id="years2"></select>
+
+  <button type="button" onclick="buildQuery()">
+    <img src="../images/spotify-button.png" alt="Button Image" width="100" height="100">
+  </button>
+  
+
+
+</body>
+
+<!-- "acousticness" float,
+    "danceability" float,
+    "energy" float,
+    "instrumentalness" float,
+    "key" integer,
+    "liveness" float,
+    "loudness" float,
+    "mode" integer,
+    "speechiness" float,
+    "tempo" float,
+    "time_signature" integer,
+    "valence" float, -->
