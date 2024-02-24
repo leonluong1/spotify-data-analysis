@@ -3,6 +3,7 @@ const homeRouter = require('./routes/home.js');
 const modelRouter = require('./routes/model.js');
 const tableauRouter = require('./routes/dashboard.js');
 const explorationRouter = require('./routes/exploration.js');
+const resourcesRouter = require('./routes/resources.js');
 const app = express();
 const path = require('path');
 const PORT = process.env.PORT || 3000;
@@ -16,6 +17,7 @@ app.use('/', homeRouter);
 app.use('/model', modelRouter);
 app.use('/dashboard', tableauRouter);
 app.use('/exploration', explorationRouter);
+app.use('/resources', resourcesRouter);
 
 /*app.use('/images', express.static('images'));
 app.use('/static', express.static('static'));

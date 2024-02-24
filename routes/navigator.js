@@ -6,7 +6,7 @@ var html_block = `
     <a href="/model" class="nav-item" title="Model">Model</a>
     <a href="/exploration" class="nav-item" title="Exploration">Exploration</a>
     <a href="/dashboard" class="nav-item" title="About Us">About Us</a>
-    <a href="/dashboard" class="nav-item" title="Resources">Resources</a>
+    <a href="/resources" class="nav-item" title="Resources">Resources</a>
     <div class="nav-item playlist-nav" title="Playlists">Playlists
         <ul class="playlist-content">
             <li class="playlist-content-item" ><a href="">Ahlden Brough</a></li>
@@ -16,6 +16,7 @@ var html_block = `
             <li class="playlist-content-item" ><a href="">Leon Luong</a></li>
         </ul>
     </div>
+</div>
 `;
     
 
