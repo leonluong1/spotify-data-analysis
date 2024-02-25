@@ -375,6 +375,13 @@ button {
   float: left;
   border-radius: 5px;
 }
+.about-photo2 {
+  position: relative;
+  width: 100px;
+  height: 134px;
+  float: left;
+  border-radius: 5px;
+}
 
 .about-description {
   position: relative;
