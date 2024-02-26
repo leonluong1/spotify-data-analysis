@@ -9,7 +9,8 @@ const app = express();
 const path = require('path');
 const PORT = process.env.PORT || 3000;
 const {
-    querySongs
+    querySongs,
+    querySliders
  } = require('./models/db.js');
  const bodyParser = require('body-parser');
  app.use(bodyParser.json());
@@ -41,14 +42,14 @@ app.get('/api/songs', async (req, res) => {
     res.json(query);
 });
 
-app.post('/buildQuery', (req, res) => {
+app.post('/buildQuery', async (req, res) => {
     console.log(req);
     console.log('gets to app.js');
     const { acousticness, danceability, energy, instrumentalness, liveness, loudness, speechiness, tempo, valence, start_year, end_year } = req.body;
   
     const query = buildQuery(acousticness, danceability, energy, instrumentalness, liveness, loudness, speechiness, tempo, valence, start_year, end_year);
-
-    res.json({ query });
+    let data = await querySliders(query);
+    res.json({ data });
   });
   
 
