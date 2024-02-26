@@ -8,11 +8,11 @@ var html_block = `
     <a href="/resources" class="nav-item" title="Resources">Resources</a>
     <div class="nav-item playlist-nav" title="Playlists">Playlists
         <ul class="playlist-content">
-            <li class="playlist-content-item" ><a href="">Ahlden Brough</a></li>
-            <li class="playlist-content-item" ><a href="">Daniel Rose</a></li>
-            <li class="playlist-content-item" ><a href="">Immanuel KC Onuoha</a></li>
-            <li class="playlist-content-item" ><a href="">Martin Perez</a></li>
-            <li class="playlist-content-item" ><a href="">Leon Luong</a></li>
+            <li class="playlist-content-item" ><a href="/playlists#ahlden">Ahlden Brough</a></li>
+            <li class="playlist-content-item" ><a href="/playlists#daniel">Daniel Rose</a></li>
+            <li class="playlist-content-item" ><a href="/playlists#immanuel">Immanuel KC Onuoha</a></li>
+            <li class="playlist-content-item" ><a href="/playlists#martin">Martin Perez</a></li>
+            <li class="playlist-content-item" ><a href="/playlists#leon">Leon Luong</a></li>
         </ul>
     </div>
 </div>

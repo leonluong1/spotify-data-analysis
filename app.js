@@ -5,6 +5,7 @@ const tableauRouter = require('./routes/dashboard.js');
 const explorationRouter = require('./routes/exploration.js');
 const aboutRouter = require('./routes/about.js');
 const resourcesRouter = require('./routes/resources.js');
+const playlistsRouter = require('./routes/playlists.js');
 const app = express();
 const path = require('path');
 const PORT = process.env.PORT || 3000;
@@ -25,6 +26,7 @@ app.use('/dashboard', tableauRouter);
 app.use('/exploration', explorationRouter);
 app.use('/about', aboutRouter);
 app.use('/resources', resourcesRouter);
+app.use('/playlists', playlistsRouter);
 
 
 /*app.use('/images', express.static('images'));
