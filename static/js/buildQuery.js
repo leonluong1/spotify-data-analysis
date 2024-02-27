@@ -28,7 +28,7 @@ function buildQuery(acousticness, danceability, energy, instrumentalness, livene
             AND speechiness BETWEEN ${(speechiness) / 100} AND ${(speechiness + adjustor) / 100} \
             AND tempo BETWEEN ${(tempo)} AND ${(tempo + tempo_buffer)} \
             AND valence BETWEEN ${(valence) / 100} AND ${(valence + adjustor) / 100} \
-            AND year BETWEEN ${start_year} AND ${end_year};`
+            AND year BETWEEN ${start_year} AND ${end_year} ORDER BY popularity DESC; `
 
     
     return query;
