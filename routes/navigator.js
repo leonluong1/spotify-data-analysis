@@ -13,6 +13,7 @@ var html_block = `
             <li class="playlist-content-item" ><a href="/playlists#immanuel">Immanuel KC Onuoha</a></li>
             <li class="playlist-content-item" ><a href="/playlists#martin">Martin Perez</a></li>
             <li class="playlist-content-item" ><a href="/playlists#leon">Leon Luong</a></li>
+            <li class="playlist-content-item" ><a href="/playlists#brian">Brian Perry</a></li>
         </ul>
     </div>
 </div>
