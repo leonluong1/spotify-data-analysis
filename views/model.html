@@ -6,6 +6,7 @@
   <title>Spotify App</title>
   <link rel="stylesheet" href="../css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Gotham:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="../static/js/model.js" defer></script>
 
   <!-- D3 JavaScript -->
   <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -14,5 +15,22 @@
 <body>
   <script src="../routes/navigator.js"></script>
   <div class="app-container">
+    <!-- Input fields -->
+    <input type="number" name="input1" id="input1" placeholder="Enter number 1">
+    <input type="number" name="input2" id="input2" placeholder="Enter number 2">
+    <input type="number" name="input3" id="input3" placeholder="Enter number 3">
+    <input type="number" name="input4" id="input4" placeholder="Enter number 4">
+    <input type="number" name="input5" id="input5" placeholder="Enter number 5">
+
+    <button type="button" onclick="sendModelQuery()">
+      <img src="../images/spotify-button.png" alt="Button Image" width="100" height="100">
+    </button>
+  
+    <p id="output">hello</p>
+
   </div>
+
+  
 </body>
+
+</html>

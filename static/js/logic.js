@@ -68,29 +68,18 @@ select2.addEventListener('change', function() {
 async function sendQuery() {
     // Collect slider values
     const adjustor = 25;
-    // const acousticness = document.getElementById('acousticness').value-adjustor;
-    // const danceability = document.getElementById('danceability').value-adjustor;
-    // const energy = document.getElementById('energy').value-adjustor;
-    // const instrumentalness = document.getElementById('instrumentalness').value-adjustor;
-    // const liveness = document.getElementById('liveness').value-adjustor;
-    // const loudness = document.getElementById('loudness').value;
-    // const speechiness = document.getElementById('speechiness').value-adjustor;
-    // const tempo = document.getElementById('tempo').value;
-    // const valence = document.getElementById('valence').value-adjustor;
-    // const start_year = document.getElementById('years1').value;
-    // const end_year = document.getElementById('years2').value;
+    const acousticness = document.getElementById('acousticness').value-adjustor;
+    const danceability = document.getElementById('danceability').value-adjustor;
+    const energy = document.getElementById('energy').value-adjustor;
+    const instrumentalness = document.getElementById('instrumentalness').value-adjustor;
+    const liveness = document.getElementById('liveness').value-adjustor;
+    const loudness = document.getElementById('loudness').value;
+    const speechiness = document.getElementById('speechiness').value-adjustor;
+    const tempo = document.getElementById('tempo').value;
+    const valence = document.getElementById('valence').value-adjustor;
+    const start_year = document.getElementById('years1').value;
+    const end_year = document.getElementById('years2').value;
 
-    const acousticness = 45;
-    const danceability = 15;
-    const energy = -4;
-    const instrumentalness = -24;
-    const liveness = -13;
-    const loudness = 71;
-    const speechiness = -22;
-    const tempo = 77;
-    const valence = 1;
-    const start_year = 1986;
-    const end_year = 2023;
     console.log('sendQuery called');
     console.log(JSON.stringify({ acousticness, danceability, energy, instrumentalness, liveness, loudness, speechiness, tempo, valence, start_year, end_year }));
     
@@ -101,19 +90,7 @@ async function sendQuery() {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ acousticness, danceability, energy, instrumentalness, liveness, loudness, speechiness, tempo, valence, start_year, end_year }),
-    //   body: {
-    //     "acousticness": 45,
-    //     "danceability": 15,
-    //     "energy": -4,
-    //     "instrumentalness": -24,
-    //     "liveness": -13,
-    //     "loudness": "71",
-    //     "speechiness": -22,
-    //     "tempo": "77",
-    //     "valence": 1,
-    //     "start_year": "1986",
-    //     "end_year": "2023"
-    //   }
+    
     });
     console.log(response);
     // Get response from server
@@ -122,6 +99,13 @@ async function sendQuery() {
 
     //const outputElement = document.getElementById('data');
     //outputElement.textContent = JSON.stringify(data);
+
+    // remove previous response rows
+    var tableBody = document.getElementById('tableBody');
+    while (tableBody.firstChild) {
+        tableBody.removeChild(tableBody.firstChild);
+    }
+
     const headers = ["track_name", "principal_artist_name", "album_name", "popularity"];
     for (var i = 0; i < json_response.data.length; i++) {
         console.log(i);
@@ -160,3 +144,18 @@ slider.addEventListener('input', () => {
     sliderValues[index].innerText = value;
 });
 });
+
+
+//   body: {
+    //     "acousticness": 45,
+    //     "danceability": 15,
+    //     "energy": -4,
+    //     "instrumentalness": -24,
+    //     "liveness": -13,
+    //     "loudness": "71",
+    //     "speechiness": -22,
+    //     "tempo": "77",
+    //     "valence": 1,
+    //     "start_year": "1986",
+    //     "end_year": "2023"
+    //   }

@@ -13,11 +13,16 @@ const {
     querySongs,
     querySliders
  } = require('./models/db.js');
- const bodyParser = require('body-parser');
- app.use(bodyParser.json());
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
 const {
     buildQuery
  } = require('./static/js/buildQuery.js');
+const { PythonShell } = require('python-shell');
+const morgan = require('morgan');
+const { spawn } = require('child_process');
+
+
  
 app.use(express.static(path.join(__dirname)));
 app.use('/', homeRouter);
@@ -27,6 +32,9 @@ app.use('/exploration', explorationRouter);
 app.use('/about', aboutRouter);
 app.use('/resources', resourcesRouter);
 app.use('/playlists', playlistsRouter);
+app.use(morgan('combined')); // Use the 'combined' log format for logging
+
+
 
 
 /*app.use('/images', express.static('images'));
@@ -53,6 +61,49 @@ app.post('/buildQuery', async (req, res) => {
     let data = await querySliders(query);
     res.json({ data });
   });
+
+const modelPath = './regression_model.joblib';
+
+app.post('/predict', (req, res) => {
+    const data = req.body;
+    const values = Object.values(data);
+    const input = values.join(' ');
+    console.log(`server side ${input}`);
+    
+    const pythonProcess = spawn('python', ['predict.py', input]);
+
+    let prediction = '';
+    let errors = '';
+    let timeoutMs = 15000;
+
+    const timeout = setTimeout(() => {
+        console.log('Timeout reached. Aborting request.');
+        pythonProcess.kill('SIGINT');
+      }, timeoutMs);      
+
+    pythonProcess.stdout.on('data', (data) => {
+        // Capture the prediction
+        prediction += data.toString();
+    });
+
+    // Capture error messages from the Python script
+    pythonProcess.stderr.on('data', (data) => {
+        errors += data.toString();
+    });
+
+    pythonProcess.on('close', (code) => {
+        if (code !== 0) {
+            console.log(code);
+            console.error('Prediction process exited with non-zero code');
+            console.error('Errors from Python script:', errors); // Log the error messages
+            res.status(500).send('Error occurred');
+        } else {
+            console.log('Prediction process finished successfully');
+            // Send the prediction back in the response
+            res.send(prediction);
+        }
+    });
+});
   
 
 app.use((err, req, res, next) => {

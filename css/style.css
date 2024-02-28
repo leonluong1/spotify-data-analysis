@@ -456,3 +456,22 @@ button {
   top: 100px;
 }
 
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+  background-color: #3a3a3a;
+}
+
+tr:nth-child(odd) {
+  background-color: #212121;
+  color: #ffffff;
+}
