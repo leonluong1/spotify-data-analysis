@@ -125,8 +125,8 @@ fetch(`${url}/songs/${name}`)
     let tbodyr2 = table2.append('tbody').append('tr').attr("class", "playlist-row");
     tbodyr2.append('th').text(maxDecade.join()).attr("class", colorDecade(maxDecade[0]));
     tbodyr2.append('th').text(maxGenre.join()).attr("class", "teal");
-    tbodyr2.append('th').text((followerSum/songTotal).toFixed(2)).attr("class", colorFollowers(followerSum/songTotal));
-    tbodyr2.append('th').text((popularSum/songTotal).toFixed(2)).attr("class", colorPopularity(popularSum/songTotal));
+    tbodyr2.append('th').text((followerSum/songTotal).toFixed(0)).attr("class", colorFollowers(followerSum/songTotal));
+    tbodyr2.append('th').text((popularSum/songTotal).toFixed(1)).attr("class", colorPopularity(popularSum/songTotal));
     tbodyr2.append('th').text((danceSum/songTotal).toFixed(2)).attr("class", colorStandard(danceSum/songTotal));
     tbodyr2.append('th').text((energySum/songTotal).toFixed(2)).attr("class", colorStandard(energySum/songTotal));;
     tbodyr2.append('th').text((loudSum/songTotal).toFixed(2)).attr("class", colorLoud(loudSum/songTotal));;
@@ -142,42 +142,48 @@ fetch(`${url}/songs/${name}`)
 
     let sortedDecades = Object.fromEntries(sortedArray);
 
-    let pieChartData = {
-      labels: Object.keys(sortedDecades),
-      values: Object.values(sortedDecades),
-      type: 'pie',
+    let decadesChartData = {
+      x: Object.keys(sortedDecades),
+      y: Object.values(sortedDecades),
+      type: 'bar',
       marker: {
-        colors: ['rgba(8, 29, 88, 0.7)', 'rgba(37, 52, 148, 0.7)', 'rgba(34, 94, 168, 0.7)', 'rgba(29, 145, 192, 0.7)',
-                'rgba(65, 182, 196, 0.7)', 'rgba(127, 205, 187, 0.7)', 'rgba(199, 233, 180, 0.7)', 'rgba(237, 248, 251, 0.7)',
-                'rgba(255, 255, 204, 0.7)', 'rgba(255, 237, 160, 0.7)', 'rgba(254, 217, 118, 0.7)', 'rgba(254, 178, 76, 0.7)',
-                'rgba(253, 141, 60, 0.7)', 'rgba(252, 78, 42, 0.7)', 'rgba(227, 26, 28, 0.7)', 'rgba(189, 0, 38, 0.7)',
-                'rgba(128, 0, 38, 0.7)', 'rgba(84, 0, 27, 0.7)']
+        color: ['#196bbd', '#3486d9', '#4f99e3', '#68a8e8', '#9ac8f5']
       }
     };
   
-    let pieChartLayout = {
+    let decadesChartLayout = {
         height: 450,
         widgth: 450,
-        margin: { t: 55, b: 27, l: 10, r: 0 },
+        margin: { t: 55, b: 37, l: 30, r: 10 },
         paper_bgcolor: '#f2f2f2',
         title: {
             text: 'Favorite Decades Breakdown',
             font: {
                 size: 24
             }
+        },
+        xaxis: {
+          title: 'Decades',
+          tickmode: 'linear',
+          dtick: 10,
+        },
+        yaxis: {
+            title: 'Number of Songs',
+            tickmode: 'linear',
+            dtick: 1,
         }
     };
   
-    // Render the Plotly pie chart
-    let pieDiv = document.querySelector(`#${name} .decades-pie-chart`);
-    Plotly.newPlot(pieDiv, [pieChartData], pieChartLayout, config);
+    // Render the Plotly decades chart
+    let decadesDiv = document.querySelector(`#${name} .decades-bar-chart`);
+    Plotly.newPlot(decadesDiv, [decadesChartData], decadesChartLayout, config);
     
     let sortedArray1 = Object.entries(genreCount).sort((a,b) => b[1] - a[1]).slice(0, 5);
     console.log(sortedArray1);
 
     let sortedGenres = Object.fromEntries(sortedArray1);
 
-    let barChartData = {
+    let genreChartData = {
         x: Object.keys(sortedGenres),
         y: Object.values(sortedGenres),
         type: 'bar',
@@ -186,10 +192,10 @@ fetch(`${url}/songs/${name}`)
         }
     };
     
-    let barChartLayout = {
+    let genreChartLayout = {
         height: 450,
         widgth: 450,
-        margin: { t: 55, b: 87, l: 30, r: 20 },
+        margin: { t: 55, b: 37, l: 30, r: 10 },
         paper_bgcolor: '#f2f2f2',
         title: {
             text: 'Top 5 Genres Chart',
@@ -208,9 +214,9 @@ fetch(`${url}/songs/${name}`)
         }
     };
     
-      // Render the Plotly bar chart
-      let barDiv = document.querySelector(`#${name} .genre-bar-chart`);
-      Plotly.newPlot(barDiv, [barChartData], barChartLayout, config);
+      // Render the Plotly genre chart
+      let genreDiv = document.querySelector(`#${name} .genre-bar-chart`);
+      Plotly.newPlot(genreDiv, [genreChartData], genreChartLayout, config);
 
   })
   .catch(error => console.error('Error:', error));
