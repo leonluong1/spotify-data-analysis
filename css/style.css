@@ -415,15 +415,15 @@ button {
 .playlist-body {
   position: absolute;
   display: grid;
-  grid-template-columns: repeat(1, 1fr); /* Three equal-width columns */
-  grid-gap: 50px; /* Gap between grid items */
-  width: 117vh;
-  top: 190px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 50px;
+  width: 177vh;
+  top: 20px;
   
 }
 
 .playlist-container {
-
+  margin: 50px 0px;
 }
 
 .playlist-title {
@@ -439,9 +439,96 @@ button {
 
 .playlist-section {
   position: relative;
-  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 50px;
+  padding: 30px;
+  margin: 30px 0px;
   background-color: #212121;
   border-radius: 5px;
+  top: 70px;
+}
+
+.playlist-row {
+  margin: 100px 0px;
   top: 100px;
 }
 
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.genres {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 50px;
+}
+
+.playlist-section2 {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 50px;
+  padding: 30px;
+  margin: 30px 0px;
+  background-color: #212121;
+  border-radius: 5px;
+  top: 70px;
+}
+
+.playlist-section3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+  padding: 30px;
+  margin: 110px 0px;
+  background-color: #212121;
+  border-radius: 5px;
+}
+
+.decades-pie-chart {
+  border-radius: 5px;
+}
+
+.genre-bar-chart {
+  border-radius: 5px;
+}
+
+.green {
+  color: rgb(39, 218, 39);
+}
+
+.yellow {
+  color: rgb(245, 245, 37);
+}
+
+.orange {
+  color: rgb(246, 167, 19);
+}
+
+.red {
+  color: rgb(255, 31, 31);
+}
+
+.blue {
+  color: rgb(0, 255, 251);
+}
+
+.purple {
+  color: rgb(230, 54, 230);
+}
+
+.pink {
+  color: pink;
+}
+
+.teal {
+  color: rgb(101, 201, 148);
+}
