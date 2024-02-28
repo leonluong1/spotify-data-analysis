@@ -102,6 +102,7 @@ app.post('/predict', (req, res) => {
             // Send the prediction back in the response
             res.send(prediction);
         }
+        pythonProcess.kill();
     });
 });
   

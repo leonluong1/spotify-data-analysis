@@ -16,17 +16,71 @@
   <script src="../routes/navigator.js"></script>
   <div class="app-container">
     <!-- Input fields -->
-    <input type="number" name="input1" id="input1" placeholder="Enter number 1">
-    <input type="number" name="input2" id="input2" placeholder="Enter number 2">
+    <div class="input-group">
+      <label for="input1">Acousticness:</label>
+      <input type="number" name="input1" id="input1" class="form-control">
+    </div>
+
+    <div class="input-group">
+      <label for="input2">Danceability:</label>
+      <input type="number" name="input2" id="input2" class="form-control">
+    </div>
+
+    <div class="input-group">
+      <label for="input3">Energy:</label>
+      <input type="number" name="input3" id="input3" class="form-control">
+    </div>
+
+    <div class="input-group">
+      <label for="input4">Liveness:</label>
+      <input type="number" name="input4" id="input4" class="form-control">
+    </div>
+
+    <div class="input-group">
+      <label for="input5">Loudness:</label>
+      <input type="number" name="input5" id="input5" class="form-control">
+    </div>
+
+    <div class="input-group">
+      <label for="input6">Speechiness:</label>
+      <input type="number" name="input6" id="input6" class="form-control">
+    </div>
+
+    <div class="input-group">
+      <label for="input7">Tempo:</label>
+      <input type="number" name="input7" id="input7" class="form-control">
+    </div>
+
+    <div class="input-group">
+      <label for="input8">Valence:</label>
+      <input type="number" name="input8" id="input8" class="form-control">
+    </div>
+
+    <div class="input-group">
+      <label for="input9">Year:</label>
+      <input type="number" name="input9" id="input9" class="form-control">
+    </div>
+
+    <div class="input-group">
+      <label for="input10">Duration:</label>
+      <input type="number" name="input10" id="input10" class="form-control">
+    </div>
+
+    <!-- <input type="number" name="input2" id="input2" placeholder="Enter number 2">
     <input type="number" name="input3" id="input3" placeholder="Enter number 3">
     <input type="number" name="input4" id="input4" placeholder="Enter number 4">
     <input type="number" name="input5" id="input5" placeholder="Enter number 5">
+    <input type="number" name="input6" id="input6" placeholder="Enter number 6">
+    <input type="number" name="input7" i<d="input7" placeholder="Enter number 7">
+    <input type="number" name="input8" id="input8" placeholder="Enter number 8">
+    <input type="number" name="input9" id="input9" placeholder="Enter number 9">
+    <input type="number" name="input10" id="input10" placeholder="Enter number 10"> -->
 
     <button type="button" onclick="sendModelQuery()">
       <img src="../images/spotify-button.png" alt="Button Image" width="100" height="100">
     </button>
-  
-    <p id="output">hello</p>
+    <p>Predicted popularity:</p>
+    <p id="output"></p>
 
   </div>
 
