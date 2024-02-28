@@ -48,4 +48,11 @@ async function querySongs(query=song_query) {
     return response.rows;
 }
 
-module.exports = {querySongs};
+async function querySliders(query) {
+    console.log('in db.js');
+    console.log(query);
+    let response = await pool.query(query);
+    return response.rows;
+}
+
+module.exports = {querySongs, querySliders};

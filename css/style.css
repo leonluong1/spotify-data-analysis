@@ -110,6 +110,10 @@ body.body2::before{
   margin-bottom: 800px;
 }
 
+.slider-container label {
+  margin-bottom: 10px;
+}
+
 .inner-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -234,14 +238,21 @@ body.body2::before{
   /* transition: visibility .45s; */
 }
 
+.main-title{
+  padding-bottom: 100px;
+}
+
 .slider-body{
-  margin: 0;
+  /* margin: 0; */
   padding: 0;
+padding-top:50px;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  /* height: 100vh; */
   justify-content: center;
   align-items: center;
+overflow: auto;
+  z-index: 1;
 }
 
 .slider-container {
@@ -531,4 +542,13 @@ th, td {
 
 .teal {
   color: rgb(101, 201, 148);
+}
+
+tr:nth-child(even) {
+  background-color: #3a3a3a;
+}
+
+tr:nth-child(odd) {
+  background-color: #212121;
+  color: #ffffff;
 }
