@@ -1,7 +1,7 @@
 
 
-let url = "https://spotify-data-analysis.onrender.com";
-//let url = "http://localhost:3000";
+//let url = "https://spotify-data-analysis.onrender.com";
+let url = "http://localhost:3000";
 
 // Columns that are queried from PostgreSQL
 let columns = "track_name, album_name, principal_artist_name, artist_genres, principal_artist_followers, duration_ms, duration_min, popularity,\
