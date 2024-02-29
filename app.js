@@ -39,7 +39,7 @@ app.use('/playlists', playlistsRouter);
 const columns = "track_name, album_name, principal_artist_name, artist_genres, principal_artist_followers, duration_ms, duration_min, popularity,\
 popularity, acousticness, danceability, energy, instrumentalness, key, liveness, loudness, mode, speechiness, tempo, valence, year"
 const names = ["ahlden", "daniel", "immanuel", "martin", "leon", "brian"];
-const ahlden =  [12, 7911, 9976, 303, 9739];
+const ahlden =  [12, 7911, 9976, 303, 9739, 676, 1365, 319, 6155, 11190];
 const daniel =  [314, 507, 6134, 347, 4519, 2514, 2203, 9357, 5892, 3281];
 const immanuel =  [5209, 8838, 9497, 9708, 10883];
 const martin =  [18, 29, 79, 85, 4945, 9412, 9411, 10471, 10478, 10496];
