@@ -1,7 +1,7 @@
 # Melody Metrics
 
 ## Overview and Purpose
-Melody Metrics built a dynamic website for visualizing Spotify music data as well as utilizing machine learning models to predict the popularity of songs. Built with JavaScript and D3 for the frontend, and powered by NodeJS and PostgreSQL on the backend, Melody Metrics offers an interactive website that displays detailed visualizations and provides comprehensive information about the company and its employees.
+Here at Melody Metrics, we built a dynamic website for visualizing Spotify music data as well as utilizing machine learning models to predict the popularity of songs. Built with JavaScript and D3 for the frontend, and powered by NodeJS and PostgreSQL on the backend, Melody Metrics offers an interactive website that displays detailed visualizations and provides comprehensive information about the company and its employees.
 
 This application is collaborative work to fulfill the Project 4 requirement for UCB Extension Data Bootcamp.
 
@@ -13,7 +13,7 @@ This application is collaborative work to fulfill the Project 4 requirement for 
 
 In adherence to the [California Consumer Privacy Act (CCPA)](https://oag.ca.gov/privacy/ccpa), our application is committed to the following ethical standards:
 
-We utilize data that is publicly hosted from the the data science site, Kaggle which was legally collected from Spotify's Web API. This data is used solely for informational and educational purposes, and is provided as-is without any warranty. Additionally, our application does not collect personal data from its users.
+We utilized data that is publicly hosted from the the data science site, Kaggle which was legally collected from Spotify's Web API. This data is used solely for informational and educational purposes, and is provided as-is without any warranty. Additionally, our application does not collect personal data from its users.
 
 ## Features
 * Interactive home page with links to other features of the website.
@@ -23,11 +23,11 @@ We utilize data that is publicly hosted from the the data science site, Kaggle w
 * Dedicated web page that displays the playlists of each Melody Metrics employee and provides interesting analysis for each one.
 
 ### Frontend
-D3: A powerful JavaScript library for manipulating documents based on data  
-Plotly: A data visualization library for JavaScript  
-Dotenv: Library to load environment variables  
-Morgan: HTTP request logger  
-Python-Shell: LIbrary to run Python Scripts from node.js  
+* D3: A powerful JavaScript library for manipulating documents based on data  
+* Plotly: A data visualization library for JavaScript  
+* Dotenv: Library to load environment variables  
+* Morgan: HTTP request logger  
+* Python-Shell: LIbrary to run Python Scripts from node.js  
 
 ### Backend
 * **PostgreSQL** Database
@@ -39,12 +39,12 @@ Python-Shell: LIbrary to run Python Scripts from node.js
 
 ## Data Analytics using Tableau
 ### Data Clean Up using Tableau Prep
-* Imported Kaggle data
-* Cleaned data by eliminating unnecessary columns and duplicate rows
-* Exporting to CSV as spotify_data2.csv
+* Import Kaggle data
+* Clean data by eliminating unnecessary columns and duplicate rows
+* Export to CSV as spotify_data2.csv
 
 ### Data Visualization
-The completed hyper file was imported into Tableau and ten visualizations were created to create a dynamic dashboard that adjusts based on the time frame (by month), age, time of day, race, sex, victim, age and area.  
+The cleaned csv was imported into Tableau to create two dashboards.  
 * Dashboard 1 - Anatomy of a Pop Song: Plots 8 different track features against the track's popularity and a treemap visualizing the artists who have the most songs in the Top 1000.
 * Dashboard 2 - Yearly Trends: Plots two line graphs that show off song length over time and album length over time respectively. Also, visualizes number of albums vs number of singles over time. 
 
@@ -58,7 +58,7 @@ The following software **MUST** be installed in your local workstation before yo
     * [npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
     * [PostgreSQL](https://www.postgresql.org/download/)
     * [pgAdmin4](https://www.pgadmin.org/download/)
-* Remote Javascript libraries can be leveraged using the following libraries CDN sites. Check [index.html](index.html) for location of CDNs
+* Remote Javascript libraries can be leveraged using the following libraries CDN sites.
     * Plotly
     * D3
 
@@ -74,9 +74,9 @@ The following software **MUST** be installed in your local workstation before yo
 * Unzip the web app file
 * Build database in PostgreSQL using pgAdmin
     * Open **pgAdmin4** and create "spotify_db" database
-    * Create **song** table
+    * Create the **song** table using the script from **sql/songs.sql**
     * Import **spotify_data2.csv**
-* Change the url variable by commenting out line 3 of songs.js and uncommenting line 4 of songs.js.
+* Change the **url** variable by commenting out line 3 of songs.js and uncommenting line 4 of songs.js.
 * Start the app
     * Locate and **navigate to the local file system** containing the web application
         * Navigate to home PATH in your local filesystem (ex. ../Projects/spotify-data-analysis)
