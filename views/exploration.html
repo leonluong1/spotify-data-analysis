@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Gotham:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="../static/js/logic.js" defer></script>
   <script src="../routes/navigator.js"></script>
+  <script src="../static/js/populateExploration.js" defer></script>
 
   <!-- D3 JavaScript -->
   <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -33,12 +34,6 @@
       <label for="energy">Energy:</label>
       <input type="range" min="1" max="100" value="50" class="slider" id="energy">
       <span id="energy-value">0.5</span>
-    </div>
-
-    <div class="slider-container">
-      <label for="instrumentalness">Instrumentalness:</label>
-      <input type="range" min="1" max="100" value="50" class="slider" id="instrumentalness">
-      <span id="instrumentalness-value">0.5</span>
     </div>
 
     <div class="slider-container">
@@ -85,7 +80,7 @@
 
     <table id="results">
       <thead>
-        <tr>
+        <tr class="header-row">
           <th>Song Title</th>
           <th>Artist</th>
           <th>Album Name</th>
