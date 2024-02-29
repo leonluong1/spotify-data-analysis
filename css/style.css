@@ -101,6 +101,11 @@ body.body2::before{
   color: #1db954;
 }
 
+.home-container {
+  position: relative;
+  top: 30px;
+}
+
 .app-container {
   display: flex;
   flex-direction: column;
@@ -108,6 +113,8 @@ body.body2::before{
   justify-content: center;
   height: 100vh;
   margin-bottom: 800px;
+  position: relative;
+  top: 30px;
 }
 
 .inner-container {
@@ -237,13 +244,12 @@ body.body2::before{
   /* transition: visibility .45s; */
 }
 
-.model-body {
+.model-container {
   position: relative;
   top: 120px;
 }
 
-.slider-body{
-  position: relative;
+.slider-body {
   margin: 0;
   padding: 0;
   padding-top: 200px;
@@ -252,7 +258,6 @@ body.body2::before{
   height: 100vh;
   justify-content: center;
   align-items: center;
-  top: 250px;
 }
 
 .slider-container {
@@ -379,7 +384,6 @@ button {
   display: grid;
   grid-template-columns: repeat(1, 1fr); /* Three equal-width columns */
   grid-gap: 50px; /* Gap between grid items */
-
   top: 190px; 
 }
 
@@ -493,18 +497,30 @@ th, td {
   /* border-bottom: 1px solid #ddd; */
 }
 
-tr:nth-child(even) {
+.playlist-container th, td {
+  border: 1px solid white;
   background-color: #212121;
 }
 
-tr:nth-child(odd) {
+#results tr:nth-child(even) {
+  background-color: #212121;
+  border: 1px solid white;
+}
+
+#results tr:nth-child(odd) {
   background-color: #3a3a3a;
   color: #ffffff;
+  border: 1px solid white;
 }
 
-table tr.header-row {
+#results table tr.header-row {
   background-color: #212121;
   color: #ffffff;
+  border: 1px solid white;
+}
+
+#results th,td {
+  border: 1px solid white;
 }
 
 .genres {
@@ -576,8 +592,8 @@ table tr.header-row {
 }
 
 .input-group {
-    /* font-family: 'Gotham Circular', sans-serif; */
-
+  /* font-family: 'Gotham Circular', sans-serif; */
+  position: relative;
   margin-bottom: 15px;
   background-color: #2a2a2a; /* Add border around input group */
   padding: 10px; /* Add some padding for better spacing */

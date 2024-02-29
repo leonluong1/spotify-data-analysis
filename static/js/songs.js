@@ -138,7 +138,6 @@ fetch(`${url}/songs/${name}`)
       };
 
     let sortedArray = Object.entries(decadeCount).sort((a,b) => a[0] - b[0]);
-    console.log(sortedArray);
 
     let sortedDecades = Object.fromEntries(sortedArray);
 
@@ -179,7 +178,6 @@ fetch(`${url}/songs/${name}`)
     Plotly.newPlot(decadesDiv, [decadesChartData], decadesChartLayout, config);
     
     let sortedArray1 = Object.entries(genreCount).sort((a,b) => b[1] - a[1]).slice(0, 5);
-    console.log(sortedArray1);
 
     let sortedGenres = Object.fromEntries(sortedArray1);
 
