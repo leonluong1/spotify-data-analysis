@@ -195,7 +195,7 @@ fetch(`${url}/songs/${name}`)
     let genreChartLayout = {
         height: 450,
         widgth: 450,
-        margin: { t: 55, b: 37, l: 30, r: 10 },
+        margin: { t: 55, b: 77, l: 30, r: 10 },
         paper_bgcolor: '#f2f2f2',
         title: {
             text: 'Top 5 Genres Chart',

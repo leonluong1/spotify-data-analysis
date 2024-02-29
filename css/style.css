@@ -549,3 +549,7 @@ th, td {
 .teal {
   color: rgb(101, 201, 148);
 }
+
+.input-group {
+  margin-bottom: 15px;
+}

@@ -22,11 +22,12 @@ float_array = list(map(float, array))
 
 # Load the saved model
 model = joblib.load('random_forest_model.joblib')
-
-sample_pred = np.array([0.294, 0.5, 0.594, 0.358, -10.906, 0.0289, 121.761, 0.853, 1986, 5.858433333])
-input_array_reshaped = sample_pred.reshape(1, -1)
+pre_shaped = np.array(float_array)
+shaped = pre_shaped.reshape(1, -1)
+# sample_pred = np.array([0.294, 0.5, 0.594, 0.358, -10.906, 0.0289, 121.761, 0.853, 1986, 5.858433333])
+# input_array_reshaped = sample_pred.reshape(1, -1)
 # Make prediction using the input data
-prediction = model.predict(input_array_reshaped)
+prediction = model.predict(shaped)
 
 # Print the prediction
 print(prediction[0])
