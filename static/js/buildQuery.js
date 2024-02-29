@@ -1,4 +1,4 @@
-function buildQuery(acousticness, danceability, energy, instrumentalness, liveness, loudness, speechiness, tempo, valence, start_year, end_year){
+function buildQuery(acousticness, danceability, energy, liveness, loudness, speechiness, tempo, valence, start_year, end_year){
     // let acousticness_slider = document.getElementById('acousticness');
     // let danceability_slider = document.getElementById('danceability');
     // let energy_slider = document.getElementById('energy');
@@ -22,7 +22,6 @@ function buildQuery(acousticness, danceability, energy, instrumentalness, livene
             WHERE acousticness BETWEEN ${(acousticness) / 100} AND ${(acousticness + adjustor) / 100} \
             AND danceability BETWEEN ${(danceability) / 100} AND ${(danceability + adjustor) / 100} \
             AND energy BETWEEN ${(energy) / 100} AND ${(energy + adjustor) / 100} \
-            AND instrumentalness BETWEEN ${(instrumentalness) / 100} AND ${(instrumentalness + adjustor) / 100} \
             AND liveness BETWEEN ${(liveness) / 100} AND ${(liveness + adjustor) / 100} \
             AND loudness BETWEEN ${(loudness)} AND ${(loudness + 25)} \
             AND speechiness BETWEEN ${(speechiness) / 100} AND ${(speechiness + adjustor) / 100} \

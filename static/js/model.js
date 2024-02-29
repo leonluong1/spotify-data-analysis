@@ -1,15 +1,16 @@
 async function sendModelQuery() {
     console.log('sendModelQuery()');
-    var inputValue1 = document.getElementById("input1").value;
-    var inputValue2 = document.getElementById("input2").value;
-    var inputValue3 = document.getElementById("input3").value;
-    var inputValue4 = document.getElementById("input4").value;
-    var inputValue5 = document.getElementById("input5").value;
-    var inputValue6 = document.getElementById("input6").value;
-    var inputValue7 = document.getElementById("input7").value;
-    var inputValue8 = document.getElementById("input8").value;
-    var inputValue9 = document.getElementById("input9").value;
-    var inputValue10 = document.getElementById("input10").value;
+    sendMiniQuery();
+    var inputValue1 = document.getElementById("acousticness").value;
+    var inputValue2 = document.getElementById("danceability").value;
+    var inputValue3 = document.getElementById("energy").value;
+    var inputValue4 = document.getElementById("liveness").value;
+    var inputValue5 = document.getElementById("loudness").value;
+    var inputValue6 = document.getElementById("speechiness").value;
+    var inputValue7 = document.getElementById("tempo").value;
+    var inputValue8 = document.getElementById("valence").value;
+    var inputValue9 = document.getElementById("year").value;
+    var inputValue10 = document.getElementById("duration").value;
     console.log(`send query json ${JSON.stringify({ inputValue1, inputValue2, inputValue3, inputValue4, inputValue5, inputValue6, inputValue7, inputValue8, inputValue9, inputValue10 })}`);
     // Make AJAX request
     const response = await fetch('/predict', {
@@ -29,5 +30,6 @@ async function sendModelQuery() {
 
     const json_response = await response.json();
     const outputElement = document.getElementById('output');
-    outputElement.textContent = JSON.stringify(json_response);
+    var output = Math.round(parseInt(JSON.stringify(json_response)));
+    outputElement.textContent = output;
 }

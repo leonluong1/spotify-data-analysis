@@ -191,6 +191,9 @@ body.body2::before{
   padding-left: 20px;
   color: #1db954; /* Spotify green color */
 }
+.main-title {
+  margin-bottom: 50px;
+}
 
 .title-container {
   width: 50%;
@@ -237,6 +240,7 @@ body.body2::before{
 .slider-body{
   margin: 0;
   padding: 0;
+  padding-top: 200px;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -477,9 +481,23 @@ table {
 }
 
 th, td {
-  border: 1px solid #dddddd;
-  text-align: left;
   padding: 8px;
+  text-align: left;
+  /* border-bottom: 1px solid #ddd; */
+}
+
+tr:nth-child(even) {
+  background-color: #212121;
+}
+
+tr:nth-child(odd) {
+  background-color: #3a3a3a;
+  color: #ffffff;
+}
+
+table tr.header-row {
+  background-color: #212121;
+  color: #ffffff;
 }
 
 .genres {

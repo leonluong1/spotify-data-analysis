@@ -19,6 +19,9 @@ app.use(bodyParser.json());
 const {
     buildQuery
  } = require('./static/js/buildQuery.js');
+const {
+    buildMiniQuery
+ } = require('./static/js/buildMiniQuery.js');
 const { PythonShell } = require('python-shell');
 const morgan = require('morgan');
 const { spawn } = require('child_process');
@@ -58,9 +61,19 @@ for (let i in names) {
 app.post('/buildQuery', async (req, res) => {
     console.log(req);
     console.log('gets to app.js');
-    const { acousticness, danceability, energy, instrumentalness, liveness, loudness, speechiness, tempo, valence, start_year, end_year } = req.body;
+    const { acousticness, danceability, energy, liveness, loudness, speechiness, tempo, valence, start_year, end_year } = req.body;
   
-    const query = buildQuery(acousticness, danceability, energy, instrumentalness, liveness, loudness, speechiness, tempo, valence, start_year, end_year);
+    const query = buildQuery(acousticness, danceability, energy, liveness, loudness, speechiness, tempo, valence, start_year, end_year);
+    let data = await querySliders(query);
+    res.json({ data });
+  });
+
+  app.post('/buildMiniQuery', async (req, res) => {
+    console.log(req);
+    console.log('gets to app.js');
+    const { acousticness, danceability, energy, liveness, loudness, speechiness, tempo, valence, year, duration } = req.body;
+  
+    const query = buildMiniQuery( acousticness, danceability, energy, liveness, loudness, speechiness, tempo, valence, year, duration );
     let data = await querySliders(query);
     res.json({ data });
   });
