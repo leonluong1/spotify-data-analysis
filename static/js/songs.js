@@ -1,6 +1,6 @@
 
 
-let url = "https://spotify-data-analysis.onrender.com/";
+let url = "https://spotify-data-analysis.onrender.com";
 //let url = "http://localhost:3000";
 
 // Columns that are queried from PostgreSQL
