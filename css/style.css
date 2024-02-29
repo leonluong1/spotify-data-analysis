@@ -234,7 +234,13 @@ body.body2::before{
   /* transition: visibility .45s; */
 }
 
+.model-body {
+  position: relative;
+  top: 120px;
+}
+
 .slider-body{
+  position: relative;
   margin: 0;
   padding: 0;
   display: flex;
@@ -242,6 +248,7 @@ body.body2::before{
   height: 100vh;
   justify-content: center;
   align-items: center;
+  top: 250px;
 }
 
 .slider-container {
