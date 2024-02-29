@@ -41,7 +41,7 @@ popularity, acousticness, danceability, energy, instrumentalness, key, liveness,
 const names = ["ahlden", "daniel", "immanuel", "martin", "leon", "brian"];
 const ahlden =  [12, 7911, 9976, 303, 9739, 676, 1365, 319, 6155, 616];
 const daniel =  [314, 507, 6134, 347, 4519, 2514, 2203, 9357, 5892, 3281];
-const immanuel =  [5209, 8838, 9497, 9708, 10883];
+const immanuel =  [5209, 8838, 9497, 9708, 10883, 8806, 8871, 8978, 9104, 9304];
 const martin =  [18, 29, 79, 85, 4945, 9412, 9411, 10471, 10478, 10496];
 const leon =  [5212, 5528, 5559, 2415, 4684, 8518, 7611, 4336, 8032, 10633];
 const brian =  [2116, 8737, 4318, 5228, 4027, 3519, 2594, 4016, 4320, 798];

@@ -13,14 +13,32 @@ const {Pool, Client} = require('pg');
 //     port: process.env.PORT,
 // });
 
-const pool = new Pool({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'spotify_db',
-    password: 'postgres',
-    port: 5432,
-});
+let remote = true;
 
+if (!remote) {
+    var creds = {
+        user: 'postgres',
+        host: 'localhost',
+        database: 'spotify_db',
+        password: 'postgres',
+        port: 5432,
+    };
+}
+else {
+    var creds = {
+        max: 2,
+        host: "bubble.db.elephantsql.com",
+        user: "sxrzfjrr",
+        port: 5432,
+        password: "7KPJmYPuhEaeEyF7jTCkO2503dXAbdVA",
+        database: "sxrzfjrr",
+        ssl: {
+        rejectUnauthorized: false,
+        }
+    }
+}
+
+const pool = new Pool(creds);
 
 // (async () => {
 //     try{
