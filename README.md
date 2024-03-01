@@ -1,13 +1,13 @@
 # Melody Metrics
 
 ## Overview and Purpose
-Here at Melody Metrics, we built a dynamic website to visualize Spotify music data as well as to use machine learning models to predict the popularity of songs. Built with JavaScript and D3 on the frontend, and powered by NodeJS and PostgreSQL on the backend, Melody Metrics offers an interactive website that displays detailed visualizations and provides comprehensive information about the company and its employees.
+Here at Melody Metrics, we built a dynamic website to visualize Spotify music data as well as use machine learning models to predict the popularity of songs. Built with JavaScript and D3 on the frontend, and powered by NodeJS and PostgreSQL on the backend, Melody Metrics offers an interactive website that displays detailed visualizations and provides comprehensive information about the company and its employees.
 
 This application is collaborative work to fulfill the Project 4 requirement for UCB Extension Data Bootcamp.
 
 #### Link to app hosted on Render: https://spotify-data-analysis.onrender.com/
 
-NOTE: **Model** page functionality will not work correctly on the website hosted on Render.
+NOTE: **Model** page functionality will not work correctly on the Render version of the app due to large file sizes.
 
 #### Link to the project presentation: https://onedrive.live.com/edit.aspx?resid=2701E4B5AEA1A3BC!87098&cid=2701e4b5aea1a3bc&CT=1709183542378&OR=ItemsView
 
