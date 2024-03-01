@@ -69,7 +69,7 @@ The following software **MUST** be installed in your local workstation before yo
 
 
 ## Installing the web application in your local workstation
-* Download the pre-requisite software packages indicated above (NodeJS, npm, PosgreSQL, and pgAdmin4)
+* Download the pre-requisite software packages indicated above (NodeJS, npm, PostgreSQL, and pgAdmin4)
 * You can either fork from the repository or download zip file from [here](https://github.com/leonluong1/spotify-data-analysis)
 * Install the following packages using node package manager (npm)
     * express 4.18.2 
