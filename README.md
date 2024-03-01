@@ -7,7 +7,7 @@ This application is collaborative work to fulfill the Project 4 requirement for 
 
 #### Link to app hosted on Render: https://spotify-data-analysis.onrender.com/
 
-NOTE: **Model** page functionality will not work correctly on the Render version of the app due to large file sizes.
+NOTE: **Model** page functionality will not work correctly on the Render version of the app due to model file being too large for Github.
 
 #### Link to the project presentation: https://onedrive.live.com/edit.aspx?resid=2701E4B5AEA1A3BC!87098&cid=2701e4b5aea1a3bc&CT=1709183542378&OR=ItemsView
 
@@ -119,6 +119,6 @@ The following software **MUST** be installed in your local workstation before yo
 ## Collaborators
 * [Ahlden Brough](https://github.com/AhldenBrough)
 * [Daniel Rose](https://github.com/danielmilesrose)
-* [Immanuel KC Onouha]()
+* [Immanuel KC Onouha](https://github.com/onuohak)
 * [Martin Perez](https://github.com/martinperezmh)
 * [Leon Luong](https://github.com/leonluong1)
