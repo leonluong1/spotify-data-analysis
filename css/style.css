@@ -32,6 +32,10 @@ body.body2::before{
   content: none;
 } */
 
+#brian2 {
+
+}
+
 .navigator {
   position: fixed;
   align-items: center;
@@ -207,6 +211,8 @@ body.body2::before{
 }
 
 .main-title {
+  position: relative;
+  top: 30px;
   margin-bottom: 50px;
 }
 
